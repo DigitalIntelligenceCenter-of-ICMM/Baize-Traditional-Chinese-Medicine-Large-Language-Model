@@ -18,13 +18,13 @@
 
 | 模型名称 | 基础模型 | 参数量 | 训练语料 | 量化方式 | 推理精度 | 下载链接 |
 |--------|----------|--------|----------|----------|----------|----------|
-| `Baize-Traditional-Chinese-Medicine-Large-Language-Model` | Qwen3-0.6B | ~0.6B | V3 | 未量化 | FP16 | [Hugging Face](https://huggingface.co/DigitalIntelligenceCenter-of-ICMM/Baize-Traditional-Chinese-Medicine-Large-Language-Model) |
-| `[Baize-Traditional-Chinese-Medicine-Large-Language-Model-V1-4bit]` | Qwen3-8B | ~8B | V1 | 4bit (NF4) | Int4 推理 | [Hugging Face](https://huggingface.co/DigitalIntelligenceCenter-of-ICMM/Baize-Traditional-Chinese-Medicine-Large-Language-Model-V1-4bit) |
-| `Baize-Traditional-Chinese-Medicine-Large-Language-Model-V1-16bit` | Qwen3-8B  | ~8B | V1 | 未量化 | FP16 | [Hugging Face](https://huggingface.co/DigitalIntelligenceCenter-of-ICMM/Baize-Traditional-Chinese-Medicine-Large-Language-Model-V1-16bit)) |
-| `Baize-Traditional-Chinese-Medicine-Large-Language-Model-V2-4bit` | Qwen3-8B  | ~8B | V2 | 4bit (NF4) | Int4 推理 | [Hugging Face](https://huggingface.co/DigitalIntelligenceCenter-of-ICMM/Baize-Traditional-Chinese-Medicine-Large-Language-Model-V2-4bit)) |
-| `Baize-Traditional-Chinese-Medicine-Large-Language-Model-V2-16bit` | Qwen3-8B  | ~8B | V2 | 未量化 | FP16 | [Hugging Face](https://huggingface.co/DigitalIntelligenceCenter-of-ICMM/Baize-Traditional-Chinese-Medicine-Large-Language-Model-V2-16bit) |
-| `Baize-Traditional-Chinese-Medicine-Large-Language-Model-V3-4bit` | Qwen3-8B  | ~8B | V3 | 4bit (NF4) | Int4 推理 | [Hugging Face](https://huggingface.co/DigitalIntelligenceCenter-of-ICMM/Baize-Traditional-Chinese-Medicine-Large-Language-Model-V3-16bit) |
-| `Baize-Traditional-Chinese-Medicine-Large-Language-Model-V3-16bit` | Qwen3-8B  | ~8B | V3 | 未量化 | FP16 | [Hugging Face](https://huggingface.co/DigitalIntelligenceCenter-of-ICMM/Baize-Traditional-Chinese-Medicine-Large-Language-Model-V3-16bit) |
+| `Baize-Traditional-Chinese-Medicine-Large-Language-Model` | Qwen3-0.6B | ~0.6B | Baize-TCM-Corpus-for-Large-Language-Models-V3 | 未量化 | FP16 | [Hugging Face](https://huggingface.co/DigitalIntelligenceCenter-of-ICMM/Baize-Traditional-Chinese-Medicine-Large-Language-Model) |
+| `[Baize-Traditional-Chinese-Medicine-Large-Language-Model-V1-4bit]` | Qwen3-8B | ~8B | Baize-TCM-Corpus-for-Large-Language-Models-V1 | 4bit (NF4) | Int4 推理 | [Hugging Face](https://huggingface.co/DigitalIntelligenceCenter-of-ICMM/Baize-Traditional-Chinese-Medicine-Large-Language-Model-V1-4bit) |
+| `Baize-Traditional-Chinese-Medicine-Large-Language-Model-V1-16bit` | Qwen3-8B  | ~8B | Baize-TCM-Corpus-for-Large-Language-Models-V1 | 未量化 | FP16 | [Hugging Face](https://huggingface.co/DigitalIntelligenceCenter-of-ICMM/Baize-Traditional-Chinese-Medicine-Large-Language-Model-V1-16bit)) |
+| `Baize-Traditional-Chinese-Medicine-Large-Language-Model-V2-4bit` | Qwen3-8B  | ~8B | Baize-TCM-Corpus-for-Large-Language-Models-V2 | 4bit (NF4) | Int4 推理 | [Hugging Face](https://huggingface.co/DigitalIntelligenceCenter-of-ICMM/Baize-Traditional-Chinese-Medicine-Large-Language-Model-V2-4bit)) |
+| `Baize-Traditional-Chinese-Medicine-Large-Language-Model-V2-16bit` | Qwen3-8B  | ~8B | Baize-TCM-Corpus-for-Large-Language-Models-V2 | 未量化 | FP16 | [Hugging Face](https://huggingface.co/DigitalIntelligenceCenter-of-ICMM/Baize-Traditional-Chinese-Medicine-Large-Language-Model-V2-16bit) |
+| `Baize-Traditional-Chinese-Medicine-Large-Language-Model-V3-4bit` | Qwen3-8B  | ~8B | Baize-TCM-Corpus-for-Large-Language-Models-V3 | 4bit (NF4) | Int4 推理 | [Hugging Face](https://huggingface.co/DigitalIntelligenceCenter-of-ICMM/Baize-Traditional-Chinese-Medicine-Large-Language-Model-V3-16bit) |
+| `Baize-Traditional-Chinese-Medicine-Large-Language-Model-V3-16bit` | Qwen3-8B  | ~8B | Baize-TCM-Corpus-for-Large-Language-Models-V3 | 未量化 | FP16 | [Hugging Face](https://huggingface.co/DigitalIntelligenceCenter-of-ICMM/Baize-Traditional-Chinese-Medicine-Large-Language-Model-V3-16bit) |
 
 > ✅ 所有 8B 模型均采用 **LoRA 微调**，原始主干冻结，适配器权重独立发布。
 
