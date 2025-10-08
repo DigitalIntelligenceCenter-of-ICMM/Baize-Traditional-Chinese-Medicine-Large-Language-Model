@@ -1,210 +1,76 @@
----
-base_model: unsloth/qwen3-8b-unsloth-bnb-4bit
-library_name: peft
-pipeline_tag: text-generation
-tags:
-- base_model:adapter:unsloth/qwen3-8b-unsloth-bnb-4bit
-- lora
-- sft
-- transformers
-- trl
-- unsloth
+# 白泽中医药大语言模型  
+**Baize-Traditional-Chinese-Medicine-Large-Language-Model**
+
+🩺 专注中医药领域的开源大语言模型（TCM-LLM）  
+📚 支持多版本语料训练 | 🧠 包含 0.6B 与 8B 系列模型 | 🔧 支持 LoRA 微调与 4bit/16bit 推理
+
+> 🐉 “白泽”取自中国古代通晓万物的神兽，寓意“通晓中医，智启未来”。本项目致力于构建面向中医药领域的智能问答与知识理解大模型。
+
 ---
 
-# Model Card for Model ID
-
-<!-- Provide a quick summary of what the model is/does. -->
-
-
-
-## Model Details
-
-### Model Description
-
-<!-- Provide a longer summary of what this model is. -->
-
-
-
-- **Developed by:** [More Information Needed]
-- **Funded by [optional]:** [More Information Needed]
-- **Shared by [optional]:** [More Information Needed]
-- **Model type:** [More Information Needed]
-- **Language(s) (NLP):** [More Information Needed]
-- **License:** [More Information Needed]
-- **Finetuned from model [optional]:** [More Information Needed]
-
-### Model Sources [optional]
-
-<!-- Provide the basic links for the model. -->
-
-- **Repository:** [More Information Needed]
-- **Paper [optional]:** [More Information Needed]
-- **Demo [optional]:** [More Information Needed]
-
-## Uses
-
-<!-- Address questions around how the model is intended to be used, including the foreseeable users of the model and those affected by the model. -->
-
-### Direct Use
-
-<!-- This section is for the model use without fine-tuning or plugging into a larger ecosystem/app. -->
-
-[More Information Needed]
-
-### Downstream Use [optional]
-
-<!-- This section is for the model use when fine-tuned for a task, or when plugged into a larger ecosystem/app -->
-
-[More Information Needed]
-
-### Out-of-Scope Use
-
-<!-- This section addresses misuse, malicious use, and uses that the model will not work well for. -->
-
-[More Information Needed]
-
-## Bias, Risks, and Limitations
-
-<!-- This section is meant to convey both technical and sociotechnical limitations. -->
-
-[More Information Needed]
-
-### Recommendations
-
-<!-- This section is meant to convey recommendations with respect to the bias, risk, and technical limitations. -->
-
-Users (both direct and downstream) should be made aware of the risks, biases and limitations of the model. More information needed for further recommendations.
-
-## How to Get Started with the Model
-
-Use the code below to get started with the model.
-
-[More Information Needed]
-
-## Training Details
-
-### Training Data
-
-<!-- This should link to a Dataset Card, perhaps with a short stub of information on what the training data is all about as well as documentation related to data pre-processing or additional filtering. -->
-
-[More Information Needed]
-
-### Training Procedure
-
-<!-- This relates heavily to the Technical Specifications. Content here should link to that section when it is relevant to the training procedure. -->
-
-#### Preprocessing [optional]
-
-[More Information Needed]
-
-
-#### Training Hyperparameters
-
-- **Training regime:** [More Information Needed] <!--fp32, fp16 mixed precision, bf16 mixed precision, bf16 non-mixed precision, fp16 non-mixed precision, fp8 mixed precision -->
-
-#### Speeds, Sizes, Times [optional]
-
-<!-- This section provides information about throughput, start/end time, checkpoint size if relevant, etc. -->
-
-[More Information Needed]
-
-## Evaluation
-
-<!-- This section describes the evaluation protocols and provides the results. -->
-
-### Testing Data, Factors & Metrics
-
-#### Testing Data
-
-<!-- This should link to a Dataset Card if possible. -->
-
-[More Information Needed]
-
-#### Factors
-
-<!-- These are the things the evaluation is disaggregating by, e.g., subpopulations or domains. -->
-
-[More Information Needed]
-
-#### Metrics
-
-<!-- These are the evaluation metrics being used, ideally with a description of why. -->
-
-[More Information Needed]
-
-### Results
-
-[More Information Needed]
-
-#### Summary
-
-
-
-## Model Examination [optional]
-
-<!-- Relevant interpretability work for the model goes here -->
-
-[More Information Needed]
-
-## Environmental Impact
-
-<!-- Total emissions (in grams of CO2eq) and additional considerations, such as electricity usage, go here. Edit the suggested text below accordingly -->
-
-Carbon emissions can be estimated using the [Machine Learning Impact calculator](https://mlco2.github.io/impact#compute) presented in [Lacoste et al. (2019)](https://arxiv.org/abs/1910.09700).
-
-- **Hardware Type:** [More Information Needed]
-- **Hours used:** [More Information Needed]
-- **Cloud Provider:** [More Information Needed]
-- **Compute Region:** [More Information Needed]
-- **Carbon Emitted:** [More Information Needed]
-
-## Technical Specifications [optional]
-
-### Model Architecture and Objective
-
-[More Information Needed]
-
-### Compute Infrastructure
-
-[More Information Needed]
-
-#### Hardware
-
-[More Information Needed]
-
-#### Software
-
-[More Information Needed]
-
-## Citation [optional]
-
-<!-- If there is a paper or blog post introducing the model, the APA and Bibtex information for that should go in this section. -->
-
-**BibTeX:**
-
-[More Information Needed]
-
-**APA:**
-
-[More Information Needed]
-
-## Glossary [optional]
-
-<!-- If relevant, include terms and calculations in this section that can help readers understand the model or model card. -->
-
-[More Information Needed]
-
-## More Information [optional]
-
-[More Information Needed]
-
-## Model Card Authors [optional]
-
-[More Information Needed]
-
-## Model Card Contact
-
-[More Information Needed]
-### Framework versions
-
-- PEFT 0.17.1
+## 📚 项目简介
+
+本项目发布一系列基于开源大模型微调的**中医药领域专用语言模型**，涵盖从小参数到大模型、从量化到全精度的多种配置，支持研究、教学与非商业应用。模型基于 [LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory) 框架进行高效微调，使用自研的 **Baize-TCM-Corpus** 系列语料库训练，具备良好的中医知识理解与问答能力。
+
+---
+
+## 🏗️ 模型概览
+
+| 模型名称 | 基础模型 | 参数量 | 训练语料 | 量化方式 | 推理精度 | 下载链接 |
+|--------|----------|--------|----------|----------|----------|----------|
+| `Baize-Traditional-Chinese-Medicine-Large-Language-Model` | Qwen3-0.6B / LLaMA3-0.6B | ~0.6B | V3 | 未量化 | FP16 | [Hugging Face](https://huggingface.co/DigitalIntelligenceCenter-of-ICMM/Baize-Traditional-Chinese-Medicine-Large-Language-Model) |
+| `[Baize-Traditional-Chinese-Medicine-Large-Language-Model-V1-4bit]` | Qwen3-8B / LLaMA3-8B | ~8B | V1 | 4bit (NF4) | Int4 推理 | [Hugging Face](https://huggingface.co/DigitalIntelligenceCenter-of-ICMM/Baize-Traditional-Chinese-Medicine-Large-Language-Model-V1-4bit) |
+| `Baize-Traditional-Chinese-Medicine-Large-Language-Model-V1-16bit` | Qwen3-8B / LLaMA3-8B | ~8B | V1 | 未量化 | FP16 | [Hugging Face](https://huggingface.co/DigitalIntelligenceCenter-of-ICMM/Baize-Traditional-Chinese-Medicine-Large-Language-Model-V1-16bit)) |
+| `Baize-Traditional-Chinese-Medicine-Large-Language-Model-V2-4bit` | Qwen3-8B / LLaMA3-8B | ~8B | V2 | 4bit (NF4) | Int4 推理 | [Hugging Face](https://huggingface.co/DigitalIntelligenceCenter-of-ICMM/Baize-Traditional-Chinese-Medicine-Large-Language-Model-V2-4bit)) |
+| `Baize-Traditional-Chinese-Medicine-Large-Language-Model-V2-16bit` | Qwen3-8B / LLaMA3-8B | ~8B | V2 | 未量化 | FP16 | [Hugging Face](https://huggingface.co/DigitalIntelligenceCenter-of-ICMM/Baize-Traditional-Chinese-Medicine-Large-Language-Model-V2-16bit) |
+| `Baize-Traditional-Chinese-Medicine-Large-Language-Model-V3-4bit` | Qwen3-8B / LLaMA3-8B | ~8B | V3 | 4bit (NF4) | Int4 推理 | [Hugging Face](https://huggingface.co/DigitalIntelligenceCenter-of-ICMM/Baize-Traditional-Chinese-Medicine-Large-Language-Model-V3-16bit) |
+| `Baize-Traditional-Chinese-Medicine-Large-Language-Model-V3-16bit` | Qwen3-8B / LLaMA3-8B | ~8B | V3 | 未量化 | FP16 | [Hugging Face](https://huggingface.co/DigitalIntelligenceCenter-of-ICMM/Baize-Traditional-Chinese-Medicine-Large-Language-Model-V3-16bit) |
+
+> ✅ 所有 8B 模型均采用 **LoRA 微调**，原始主干冻结，适配器权重独立发布。
+
+---
+
+## 🧾 训练详情
+
+- **微调框架**：[LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory)
+- **训练方式**：LoRA（`r=64, lora_alpha=128, target_modules=q_proj,v_proj`）
+- **上下文长度**：2048 tokens
+- **语料版本说明**：
+  - **V1**：初版语料，4,000+ QA 对
+  - **V2**：扩展至 10,578 条，优化术语一致性
+  - **V3**：进一步清洗与扩展(157,438对)，覆盖更多临床与经典文献场景
+
+---
+
+## 🚀 快速使用
+
+### 1. 加载 4bit 量化模型（低显存）
+
+```python
+from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
+import torch
+
+bnb_config = BitsAndBytesConfig(
+    load_in_4bit=True,
+    bnb_4bit_quant_type="nf4",
+    bnb_4bit_compute_dtype=torch.float16,
+)
+
+model = AutoModelForCausalLM.from_pretrained(
+    "your-username/baize-tcm-8b-v3-4bit",
+    quantization_config=bnb_config,
+    device_map="auto",
+    trust_remote_code=True
+)
+tokenizer = AutoTokenizer.from_pretrained("your-username/baize-tcm-8b-v3-4bit", trust_remote_code=True)
+
+
+### 2. 加载 16bit 模型（高精度推理）
+python
+model = AutoModelForCausalLM.from_pretrained(
+    "your-username/baize-tcm-8b-v3-16bit",
+    torch_dtype=torch.float16,
+    device_map="auto",
+    trust_remote_code=True
+)
+tokenizer = AutoTokenizer.from_pretrained("your-username/baize-tcm-8b-v3-16bit", trust_remote_code=True)
